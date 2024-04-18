@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --gap: 20px;
+  --title-size: 14px;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  place-items: stretch;
+  text-align: center;
+  border-radius: 30px;
+  gap: var(--gap);
+}
+
+.shelf {
+  grid-template-columns: repeat(4, minmax(300px, 1fr));
+  background-color: burlywood;
+  padding: 20px;
+  gap: var(--gap);
+}
+
+.card {
+  display: grid;
+  grid-template-areas:
+    "title title"
+    "info info"
+    "remove status";
+  gap: var(--gap);
+  background-color: moccasin;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+dialog {
+  margin: auto;
+  padding: 20px;
+}
+
+dialog[open] {
+  opacity: 1;
+  transform: scaleY(1);
+}
